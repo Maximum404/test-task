@@ -5,3 +5,4 @@ pytest-asyncio
 asyncpg
 python-dotenv
 loguru
+flake8
