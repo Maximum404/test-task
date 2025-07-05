@@ -1,0 +1,7 @@
+aiogram
+alembic
+pytest
+pytest-asyncio
+asyncpg
+python-dotenv
+loguru
