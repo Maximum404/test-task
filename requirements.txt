@@ -7,4 +7,5 @@ python-dotenv
 loguru
 flake8
 dotenv
-psycopg
+psycopg2-binary
+sqlalchemy
