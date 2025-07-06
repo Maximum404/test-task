@@ -6,3 +6,5 @@ asyncpg
 python-dotenv
 loguru
 flake8
+dotenv
+psycopg
