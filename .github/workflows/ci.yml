@@ -52,6 +52,18 @@ jobs:
       - name: Lint with flake8
         run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 
+      - name: Create .env file
+        run: |
+          echo "DB_HOST=localhost" > .env
+          echo "DB_PORT=5432" >> .env
+          echo "DB_NAME=testdb" >> .env
+          echo "DB_USER=testuser" >> .env
+          echo "DB_PASSWORD=testpassword" >> .env
+          echo "DATABASE_URL=postgresql://testuser:testpassword@localhost:5432/testdb" >> .env
+          echo "DATABASE_URL_ASYNC=postgresql+asyncpg://testuser:testpassword@localhost:5432/testdb" >> .env
+          echo "BOT_TOKEN=test_token" >> .env
+          cat .env
+
       - name: Run migrations
         run: alembic upgrade head
 
