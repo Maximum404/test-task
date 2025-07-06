@@ -32,7 +32,7 @@ jobs:
       DB_USER: testuser
       DB_PASSWORD: testpassword
       TEST_DATABASE_URL: postgresql+asyncpg://testuser:testpassword@localhost/testdb
-      BOT_TOKEN: test_token
+      BOT_TOKEN: "1234567890:AABBCCDDEEFFaabbccddeeff-1234567890123"
 
     steps:
       - name: Checkout code
@@ -61,7 +61,7 @@ jobs:
           echo "DB_PASSWORD=testpassword" >> .env
           echo "DATABASE_URL=postgresql://testuser:testpassword@localhost:5432/testdb" >> .env
           echo "DATABASE_URL_ASYNC=postgresql+asyncpg://testuser:testpassword@localhost:5432/testdb" >> .env
-          echo "BOT_TOKEN=test_token" >> .env
+          echo "BOT_TOKEN=1234567890:AABBCCDDEEFFaabbccddeeff-1234567890123" >> .env
           cat .env
 
       - name: Run migrations

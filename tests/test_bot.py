@@ -106,4 +106,4 @@ async def test_echo_check(get_user_mock, message_mock):
     get_user_mock.assert_called_once_with(12345)
 
     # Проверяем что отправлено правильное сообщение
-    message_mock.answer.assert_called_once_with("Привет, Test User!") 
+    message_mock.answer.assert_called_once_with("Привет, Test User!")
